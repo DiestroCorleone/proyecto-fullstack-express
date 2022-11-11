@@ -1,16 +1,14 @@
 import express from "express";
+import cors from "cors";
+import blogRoutes from "./routes/blogRoutes.js"; // Se recomienda incluir la extensión del archivo.
 
 const app = express(); // Separamos todos los métodos de express para su posterior uso.
 const port = 8000;
 
-app.get("/", (req, res) => {
-  res.send("Hello world!");
-});
+app.use("/blogs", blogRoutes);
 
-app.get("/contacto", (req, res) => {
-  //Podemos definir rutas desde el primer parámetro.
-  res.send("Página de contacto!");
-});
+app.use(cors());
+app.use(express.json()); // Ambas son configuraciones que hacen que la información que viaje, la modela y configura.
 
 app.listen(port, () => {
   console.log("Example app listening at http://localhost:" + port);
