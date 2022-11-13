@@ -1,4 +1,5 @@
 import express from "express";
+import {getAllBllogs} from '../controllers/blogController.js';
 
 const router = express.Router(); // Guardamos todos los métodos de Router (GET, POST, PUT, DELETE).
 
