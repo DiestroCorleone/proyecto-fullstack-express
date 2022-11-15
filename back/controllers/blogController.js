@@ -1,4 +1,4 @@
-import blogModel from '..models/blogModel.js';
+import blogModel from "../models/blogModel.js";
 
 // Métodos para el CRUD.
 
