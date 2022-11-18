@@ -41,7 +41,7 @@ export const getBlogProfe = async (req, res) => {
 
 export const deleteBlog = async (req, res) => {
   try {
-    const blog = await blogModel.destroy({ where: { id: req.params.id } });
+    await blogModel.destroy({ where: { id: req.params.id } });
     res.json({ message: `Registro con id ${req.params.id} eliminado!` });
   } catch (e) {
     res.json({ message: error.message });
@@ -59,7 +59,7 @@ export const createBlog = async (req, res) => {
 
 export const updateBlog = async (req, res) => {
   try {
-    await blogModel.create(req.body, {
+    await blogModel.update(req.body, {
       where: { id: req.params.id },
     }); // Informamos lo que queremos editar, en este caso, el body, indicando el ID en cuestión como segundo parámetro..
     res.json({ message: "Registro editado de forma exitosa!" });
