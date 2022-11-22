@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-gradient-orange {
+  background-color: linear-gradient(to right, OrangeRed, Orange);
+}
+
+.text-gradient-orange {
+  background: linear-gradient(to right, OrangeRed, Orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

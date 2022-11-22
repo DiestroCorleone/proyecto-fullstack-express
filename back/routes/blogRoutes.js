@@ -15,6 +15,6 @@ router.get("/:id", getBlog); // Agregamos el parámetro del request que tomará 
 router.get("/blog-profe/:id", getBlogProfe); // Usa el findAll() con parámetro, no tan eficiente como findOne().
 router.post("/", createBlog);
 router.put("/:id", updateBlog);
-router.delete("/delete/:id", deleteBlog);
+router.delete("/:id", deleteBlog);
 
 export default router;
