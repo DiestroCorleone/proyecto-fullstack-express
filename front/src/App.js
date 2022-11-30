@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import CreateBlog from "./components/CreateBlog";
 import EditBlog from "./components/EditBlog";
 import ShowBlogs from "./components/ShowBlogs";
+import ShowBlog from "./components/ShowBlog";
 import NavBar from "./components/NavBar";
 
 export default function App() {
@@ -16,7 +17,8 @@ export default function App() {
         <Col sm="10" lg="8" className="m-auto">
           <Routes>
             <Route path="/" element={<ShowBlogs />} />
-            <Route path="/edit" element={<EditBlog />} />
+            <Route path="/:id" element={<ShowBlog />} />
+            <Route path="/edit/:id" element={<EditBlog />} />
             <Route path="/create" element={<CreateBlog />} />
           </Routes>
         </Col>

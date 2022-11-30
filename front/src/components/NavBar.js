@@ -20,9 +20,6 @@ export default function NavBar() {
             <Nav.Link as={Link} to="/create">
               create blog
             </Nav.Link>
-            <Nav.Link as={Link} to="/edit">
-              edit blog
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
